@@ -1,3 +1,15 @@
-body {
+/* 🔥 FIX GLOBAL SCROLL HORIZONTAL */
+html, body {
   overflow-x: hidden;
+}
+
+/* 🔥 TODOS LOS ELEMENTOS RESPETAN EL ANCHO */
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }

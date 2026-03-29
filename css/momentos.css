@@ -1,0 +1,139 @@
+/* SECCION MOMENTOS */
+.momentos {
+  display: flex;
+  justify-content: center;
+  padding: 60px 16px;
+}
+
+/* CONTENEDOR */
+.momentos-container {
+  width: 100%;
+  max-width: 1200px;
+
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* DIVIDER (desktop oculto) */
+.momentos-divider {
+  display: none;
+}
+
+/* IZQUIERDA */
+.momentos-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* TITULO */
+.momentos-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 36px;
+  color: #8B5FBF;
+}
+
+/* DERECHA */
+.momentos-right {
+  flex: 2;
+  padding-left: 40px;
+  position: relative;
+}
+
+/* LINEA VERTICAL (DESKTOP) */
+.momentos-right::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10%;
+  height: 80%;
+  width: 3px;
+  background: #F0BD4C;
+  border-radius: 2px;
+}
+
+/* TEXTO */
+.momentos-text {
+  font-family: 'Cinzel', serif;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 12px;
+  color: #333;
+
+  text-align: justify;
+  text-align-last: center;
+}
+
+/* HIGHLIGHTS */
+.highlight.purple {
+  color: #8B5FBF;
+  font-weight: 600;
+}
+
+.highlight.blue {
+  color: #4DA6FF;
+  font-weight: 600;
+}
+
+/* SEO H2 */
+.seo-h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #F03591;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+
+  .momentos {
+    padding: 40px 16px;
+  }
+
+  .momentos-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0;
+  }
+
+  .momentos-left,
+  .momentos-right {
+    width: 100%;
+  }
+
+  .momentos-right {
+    padding: 0;
+  }
+
+  /* ❌ QUITAMOS LINEA LATERAL */
+  .momentos-right::before {
+    display: none;
+  }
+
+  /* ✅ ACTIVAMOS LINEA HORIZONTAL */
+  .momentos-divider {
+    display: block;
+    width: 70%;
+    height: 3px;
+    background: #F0BD4C;
+    margin: 20px auto;
+  }
+
+  .momentos-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .momentos-text {
+    font-size: 15px;
+    padding: 0 10px;
+  }
+
+  .seo-h2 {
+    padding: 0 10px;
+  }
+}

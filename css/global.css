@@ -1,5 +1,5 @@
 /* 🔥 FIX GLOBAL SCROLL HORIZONTAL */
-html, body {
+ body {
   overflow-x: hidden;
 }
 

@@ -1,0 +1,191 @@
+/* SECCION */
+.ocasiones {
+  padding: 80px 16px;
+  display: flex;
+  justify-content: center;
+}
+
+/* CONTENEDOR */
+.ocasiones-container {
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+/* TITULOS */
+.ocasiones-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  color: #4DA6FF;
+  margin-bottom: 40px;
+}
+
+.ocasiones-bottom {
+  margin-top: 40px;
+  font-family: 'Cinzel', serif;
+  font-size: 24px;
+  color: #4DA6FF;
+}
+
+/* GRID */
+.ocasiones-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* CARD BASE */
+.card {
+  width: 300px;
+  padding: 30px 20px;
+  border-radius: 16px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+  transition: all 0.35s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 🔥 HOVER PRO */
+.card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* brillo sutil */
+.card::after {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    transparent 40%,
+    rgba(255,255,255,0.2),
+    transparent 60%
+  );
+  transition: 0.6s;
+}
+
+.card:hover::after {
+  top: 0;
+  left: 0;
+}
+
+/* IMG */
+.card img {
+  width: 100%;
+  max-width: 220px;
+  margin-bottom: 20px;
+  transition: transform 0.4s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+/* TITULO */
+.card h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 22px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+/* TEXTO */
+.card p {
+  font-family: 'Arimo', sans-serif;
+  font-size: 14px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* BOTON */
+.btn-card {
+  background: #8B5FBF;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.btn-card:hover {
+  transform: scale(1.05);
+}
+
+/* SEO hidden */
+.seo-hidden {
+  position: absolute;
+  left: -9999px;
+}
+
+/* GRADIENTES */
+.card-cumple {
+  background: linear-gradient(to bottom, #2C799A, #42AEDD);
+  border: 4px solid #42AEDD;
+}
+
+.card-bodas {
+  background: linear-gradient(to bottom, #9D7B30, #F0BD4C);
+  border: 4px solid #F0BD4C;
+}
+
+.card-xv {
+  background: linear-gradient(to bottom, #96205A, #F03591);
+  border: 4px solid #F03591;
+}
+
+/* 🔥 SCROLL ANIMATION BASE */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+  .ocasiones {
+    padding: 40px 16px;
+  }
+
+  .ocasiones-title {
+    font-size: 28px;
+  }
+
+  .ocasiones-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .card img {
+    max-width: 200px;
+  }
+
+  .ocasiones-bottom {
+    font-size: 18px;
+  }
+}

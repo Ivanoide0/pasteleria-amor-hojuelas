@@ -1,0 +1,205 @@
+/* HERO BASE */
+.hero {
+  display: flex;
+  justify-content: center;
+  padding: 60px 16px;
+  background: #ffffff;
+}
+
+/* CONTENEDOR */
+.hero-container {
+  width: 100%;
+  max-width: 1200px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* TEXTO */
+.hero-text {
+  max-width: 500px;
+  text-align: center;
+}
+
+/* LOGO */
+.hero-logo {
+  width: 420px;
+  margin-bottom: 20px;
+}
+
+/* FRASE */
+.hero-quote {
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* H1 */
+.hero-text h1 {
+  font-family: 'Arimo', sans-serif;
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
+/* BOTONES */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.6s;
+}
+
+/* BOTONES */
+.btn {
+  padding: 14px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-family: 'Arimo', sans-serif;
+  font-weight: 500;
+  background: #F0BD4C;
+  color: #fff;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+}
+
+/* IMAGEN */
+.hero-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🔥 GLOW (FIJO Y CORRECTO) */
+.cake-glow {
+  position: absolute;
+
+  width: 650px;
+  height: 650px;
+
+  background: radial-gradient(
+    circle,
+    #f3d3a2 20%,
+    #fbeCDC 60%,
+    transparent 100%
+  );
+
+  border-radius: 50%;
+  filter: blur(70px);
+
+  /* 🔥 ESTA ES LA POSICIÓN CORRECTA */
+  right: 0;
+  top: 50%;
+  transform: translate(15%, -50%);
+
+  z-index: 1;
+}
+
+/* IMAGEN */
+.hero-image img {
+  width: 500px;
+  position: relative;
+  z-index: 2;
+}
+
+/* ANIMACIONES BASE */
+.animate-text,
+.animate-cake,
+.animate-glow {
+  opacity: 0;
+}
+
+/* TEXTO */
+.animate-text {
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.3s;
+}
+
+/* PASTEL */
+.animate-cake {
+  transform: scale(0.9);
+  animation: cakeIn 1s ease forwards;
+  animation-delay: 0.2s;
+}
+
+/* GLOW SOLO FADE (SIN MOVERLO) */
+.animate-glow {
+  animation: glowFade 1s ease forwards;
+  animation-delay: 0.4s;
+}
+
+/* KEYFRAMES */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cakeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 🔥 SOLO APARECE, NO SE MUEVE */
+@keyframes glowFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-logo {
+    width: 300px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-image img {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* 🔥 GLOW MOBILE (CENTRADO CON PASTEL) */
+  .cake-glow {
+    width: 260px;
+    height: 260px;
+
+    filter: blur(50px);
+
+    left: 50%;
+    top: 65%;
+    right: auto;
+
+    transform: translate(-50%, -50%);
+  }
+
+}

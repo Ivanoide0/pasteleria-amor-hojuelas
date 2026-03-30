@@ -1,0 +1,121 @@
+/* SECCION */
+.info-bodas {
+  background: #FBEDCD;
+  padding: 80px 16px;
+  display: flex;
+  justify-content: center;
+}
+
+/* CONTENEDOR */
+.info-bodas-container {
+  max-width: 1200px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* TEXTO */
+.info-bodas-text {
+  flex: 1;
+  max-width: 520px;
+}
+
+/* TITULO */
+.info-bodas-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  color: #96205A;
+  margin-bottom: 20px;
+}
+
+/* RESALTADO */
+.info-bodas-text h2 span {
+  display: block;
+}
+
+/* TEXTO */
+.info-bodas-text p {
+  font-family: 'Arimo', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* BOTON */
+.btn-whatsapp-bodas {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  background: #6FCF97;
+  color: white;
+  text-decoration: none;
+
+  padding: 14px 24px;
+  border-radius: 999px;
+
+  font-size: 14px;
+  transition: all 0.3s ease;
+
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* ICON */
+.btn-whatsapp-bodas img {
+  width: 20px;
+}
+
+/* HOVER */
+.btn-whatsapp-bodas:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
+
+/* IMAGEN */
+.info-bodas-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.info-bodas-img img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+  .info-bodas {
+    padding: 40px 16px;
+  }
+
+  .info-bodas-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .info-bodas-text h2 {
+    font-size: 26px;
+  }
+
+  .info-bodas-text p {
+    font-size: 14px;
+  }
+
+  .info-bodas-img img {
+    max-width: 320px;
+  }
+
+  .btn-whatsapp-bodas {
+    justify-content: center;
+    width: 100%;
+  }
+
+}

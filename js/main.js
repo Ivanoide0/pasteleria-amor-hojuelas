@@ -101,3 +101,9 @@ function mostrarError(msg) {
   status.innerText = msg;
   status.style.color = "#ff4d6d";
 }
+
+document.querySelectorAll('.btn-card').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+  });
+});

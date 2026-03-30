@@ -1,0 +1,102 @@
+/* SECCION */
+
+
+.galeria-bodas {
+  background: #FBEDCD;
+  padding: 80px 16px;
+  display: flex;
+  justify-content: center;
+}
+
+/* CONTENEDOR */
+.galeria-container {
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+/* TITULO */
+.galeria-title {
+  font-family: 'Cinzel', serif;
+  font-size: 36px;
+  color: #664F1C;
+  margin-bottom: 50px;
+}
+
+/* GRID */
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* ITEM */
+.galeria-item {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  cursor: pointer;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* HOVER */
+.galeria-item:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* 🔥 CONTENEDOR DE IMAGEN */
+.galeria-item img {
+  width: 100%;
+
+  /* 🔥 MÁS ALTURA */
+  height: 360px;
+
+  /* 🔥 NO RECORTA EL PASTEL */
+  object-fit: contain;
+
+  /* 🔥 FONDO PARA QUE NO SE VEA vacío */
+  background: #fff;
+  padding: 10px;
+}
+
+/* INFO */
+.galeria-info {
+  padding: 15px;
+  background: #f9f9f9;
+}
+
+/* ESTRELLAS */
+.stars {
+  color: #F0BD4C;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+/* REVIEW */
+.review {
+  font-family: 'Arimo', sans-serif;
+  font-size: 13px;
+  color: #555;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+  .galeria-title {
+    font-size: 26px;
+  }
+
+  .galeria-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 16px;
+  }
+
+  .galeria-item img {
+    height: 280px;
+  }
+
+}

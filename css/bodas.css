@@ -1,0 +1,143 @@
+/* HERO BODAS */
+.hero-bodas {
+  padding: 80px 16px;
+  display: flex;
+  justify-content: center;
+  background: #ffffff; /* 🔥 limpio como figma */
+}
+
+.hero-bodas-container {
+  max-width: 1200px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* TEXTO */
+.hero-bodas-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 🔥 centra TODO */
+  text-align: center;
+  max-width: 520px;
+}
+
+/* 🔥 LOGO GRANDE Y CENTRADO */
+.hero-bodas-logo {
+  width: 420px; /* 🔥 más grande */
+  max-width: 100%;
+  margin-bottom: 25px;
+}
+
+/* TITULO */
+.hero-bodas-text h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 30px;
+  color: #96205A;
+  margin-bottom: 10px;
+}
+
+/* SUB */
+.hero-bodas-sub {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* 🔥 BOTON MEJORADO */
+.btn.primary {
+  background: #F0BD4C;
+  padding: 14px 32px;
+  border-radius: 999px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  box-shadow: 0 8px 20px rgba(240,189,76,0.3);
+}
+
+/* 🔥 HOVER PRO */
+.btn.primary:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(240,189,76,0.4);
+}
+
+/* IMAGEN */
+.hero-bodas-image {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🔥 PASTEL MÁS CONTROLADO */
+.cake-img {
+  width: 420px;
+  max-width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+/* 🔥 GLOW COMO EN FIGMA (más elegante) */
+.bodas-glow {
+ position: absolute;
+
+  width: 650px;
+  height: 650px;
+
+  background: radial-gradient(
+    circle,
+    #f3d3a2 20%,
+    #fbecdc 60%,
+    transparent 100%
+  );
+
+  border-radius: 50%;
+  filter: blur(70px);
+
+  /* 🔥 ESTA ES LA POSICIÓN CORRECTA */
+  right: 0;
+  top: 50%;
+  transform: translate(2%, -50%);
+
+  z-index: 1;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+  .hero-bodas {
+    padding: 40px 16px;
+  }
+
+  .hero-bodas-container {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+
+  /* LOGO */
+  .hero-bodas-logo {
+    width: 260px;
+  }
+
+  /* TITULO */
+  .hero-bodas-text h1 {
+    font-size: 22px;
+  }
+
+  /* PASTEL */
+  .cake-img {
+    width: 280px;
+  }
+
+  .bodas-glow {
+    width: 280px;
+    height: 280px;
+  }
+
+}

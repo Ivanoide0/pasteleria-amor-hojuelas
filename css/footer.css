@@ -1,0 +1,177 @@
+/* FOOTER BASE */
+.footer {
+  background: #3B887E;
+  color: white;
+  width: 100%;
+}
+
+/* CONTENEDOR */
+.footer-container {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 16px;
+}
+
+/* LOGOS LATERALES */
+.footer-logo {
+  position: absolute;
+  width: 110px;
+  opacity: 0.75; /* 🔥 75% */
+  object-fit: contain; /* 🔥 evita recorte */
+}
+
+.footer-logo.left {
+  left: 0;
+}
+
+.footer-logo.right {
+  right: 0;
+}
+
+/* CENTRO */
+.footer-center {
+  text-align: center;
+}
+
+/* LOGO TEXTO CENTRAL */
+.footer-brand {
+  width: 400px; /* 🔥 MÁS GRANDE */
+  max-width: 90%;
+  margin-bottom: 25px;
+  justify-content: center;
+}
+
+/* DIVIDER */
+.footer-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.footer-divider span {
+  width: 100px;
+  height: 2px;
+  background: rgba(255,255,255,0.6);
+}
+
+.footer-divider p {
+  background: #EDEDED;
+  color: #333;
+  padding: 6px 16px;
+  border-radius: 10px;
+  font-family: 'Cinzel', serif;
+  font-size: 14px;
+}
+
+/* REDES */
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.footer-social img {
+  width: 30px;
+  transition: all 0.3s ease;
+}
+
+.footer-social img:hover {
+  transform: scale(1.2);
+}
+
+/* 🔻 BOTTOM */
+.footer-bottom {
+  background: #1f1f1f;
+  color: #ccc;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 16px;
+  font-size: 13px;
+  gap: 20px;
+}
+
+/* IZQUIERDA (AHORA LINK) */
+.footer-copy-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #ccc;
+  max-width: 60%;
+}
+
+/* SVG R */
+.footer-r {
+  width: 32px;
+  height: 32px;
+  background: white;
+  padding: 6px;
+  border-radius: 8px;
+}
+
+/* TEXTO */
+.footer-copy-left p {
+  margin: 0;
+}
+
+/* DERECHA */
+.footer-copy-right {
+  text-align: right;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+  .footer-container {
+    flex-direction: column;
+    padding: 50px 16px;
+  }
+
+  /* 🔥 OCULTAMOS LATERALES EN MOBILE */
+  .footer-logo {
+    display: none;
+  }
+
+  .footer-brand {
+    width: 240px;
+  }
+
+  .footer-divider span {
+    width: 60px;
+  }
+
+  .footer-divider p {
+    font-size: 12px;
+  }
+
+  .footer-social img {
+    width: 26px;
+  }
+
+  /* BOTTOM STACK */
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-copy-left {
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .footer-copy-right {
+    text-align: center;
+  }
+
+}

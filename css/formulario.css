@@ -1,0 +1,157 @@
+/* 🔥 RESET GLOBAL */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* SECCION */
+.contacto {
+  position: relative;
+  background: linear-gradient(to bottom, #96205A, #300A1D);
+  padding: 80px 16px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* IMAGEN DECORATIVA */
+.contacto-bg-left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 280px;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+/* CONTENEDOR */
+.contacto-container {
+  width: 100%;
+  max-width: 500px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+
+/* TITULO */
+.contacto-title {
+  font-family: 'Cinzel', serif;
+  font-size: 22px;
+  color: #4A7AA0;
+}
+
+/* SUB */
+.contacto-sub {
+  color: #F03591;
+  margin: 10px 0 20px;
+  font-family: 'Arimo', sans-serif;
+}
+
+/* INPUTS */
+.contacto input,
+.contacto textarea,
+.select-tipo {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 2px solid #4A7AA0;
+  font-family: 'Arimo', sans-serif;
+  font-size: 14px;
+}
+
+/* TEXTAREA */
+.contacto textarea {
+  border: 2px solid #F03591;
+  height: 120px;
+  resize: none;
+}
+
+/* SELECT */
+.select-tipo {
+  background: #fff;
+  cursor: pointer;
+}
+
+/* LABEL */
+.form-label {
+  color: #F03591;
+  margin: 15px 0 10px;
+  font-weight: 500;
+}
+
+/* BOTON */
+.btn-whatsapp {
+  width: 100%;
+  padding: 12px; /* 🔥 más delgado */
+  background: #6FCF97;
+  border: none;
+  border-radius: 999px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  color: white;
+  font-size: 15px;
+  font-family: 'Arimo', sans-serif;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* ICONO */
+.btn-whatsapp img {
+  width: 18px;
+  height: 18px;
+}
+
+/* HOVER */
+.btn-whatsapp:hover {
+  transform: scale(1.03);
+  background: #57b97f;
+}
+
+/* ESTADO LOADING */
+.btn-whatsapp.loading {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+/* STATUS */
+.form-status {
+  margin-top: 10px;
+  font-size: 14px;
+  font-family: 'Arimo', sans-serif;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+  .contacto {
+    padding: 40px 16px;
+  }
+
+  .contacto-container {
+    padding: 20px;
+  }
+
+  .contacto-title {
+    font-size: 18px;
+  }
+
+  .contacto-bg-left {
+    width: 180px;
+    opacity: 0.6;
+  }
+
+  .btn-whatsapp {
+    padding: 11px;
+  }
+
+}

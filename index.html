@@ -294,6 +294,55 @@
 
 </section>
 
+<!-- FORMULARIO DE CONTACTO -->
+
+<section class="contacto">
+
+  <img src="assets/img/pastelFormulario.png" class="contacto-bg-left" alt="">
+
+  <div class="contacto-container">
+
+    <h2 class="contacto-title">
+      Tomamos muy en serio tu orden
+    </h2>
+
+    <p class="contacto-sub">
+      Tu orden será atendida lo más pronto posible
+    </p>
+
+    <form id="formulario">
+
+      <input type="text" id="nombre" placeholder="Nombre" required>
+      <input type="tel" id="telefono" placeholder="Teléfono" required>
+      <input type="email" id="correo" placeholder="Correo (opcional)">
+
+      <p class="form-label">Me interesan pasteles de:</p>
+
+      <!-- 🔥 COMBOBOX -->
+      <select id="tipo" class="select-tipo" required>
+        <option value="">Selecciona una opción</option>
+        <option value="Bodas">Bodas</option>
+        <option value="Cumpleaños">Cumpleaños</option>
+        <option value="XV años">XV años</option>
+        <option value="Otros">Otros</option>
+      </select>
+
+      <textarea id="mensaje" placeholder="Escribe tu mensaje..."></textarea>
+
+      <!-- BOTON -->
+      <button type="button" class="btn-whatsapp" onclick="enviarWhatsApp()">
+        <img src="assets/icons/whatsapp.svg" alt="">
+        <span class="btn-text">Enviar</span>
+      </button>
+
+      <p id="form-status" class="form-status"></p>
+
+    </form>
+
+  </div>
+
+</section>
+
 <script src="js/main.js"></script>
 </body>
 </html>

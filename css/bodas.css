@@ -112,7 +112,7 @@
 @media (max-width: 768px) {
 
   .hero-bodas {
-    padding: 40px 16px;
+   overflow: hidden; /* 🔥 CLAVE */
   }
 
   .hero-bodas-container {

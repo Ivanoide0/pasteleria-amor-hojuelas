@@ -1,0 +1,113 @@
+/* SECCION */
+.postres {
+  padding: 80px 16px;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+}
+
+/* CONTENEDOR */
+.postres-container {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+}
+
+/* TITULO */
+.postres-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+/* SUB */
+.postres-sub {
+  font-family: 'Arimo', sans-serif;
+  font-size: 15px;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  color: #555;
+}
+
+/* 🎠 CARRUSEL */
+.carousel {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+
+  animation: scroll 25s linear infinite;
+}
+
+/* IMAGENES */
+.carousel img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+
+  transition: transform 0.3s ease;
+}
+
+.carousel img:hover {
+  transform: scale(1.05);
+}
+
+/* ANIMACION */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* BOTON */
+.btn-postres {
+  display: inline-block;
+  margin-top: 40px;
+
+  background: #F0BD4C;
+  color: white;
+  text-decoration: none;
+
+  padding: 14px 28px;
+  border-radius: 999px;
+
+  font-family: 'Arimo', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.btn-postres:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+  .postres-title {
+    font-size: 26px;
+  }
+
+  .postres-sub {
+    font-size: 14px;
+  }
+
+  .carousel img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .btn-postres {
+    width: 100%;
+  }
+
+}

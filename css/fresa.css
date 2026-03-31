@@ -1,0 +1,205 @@
+/* SECCION */
+.fresa {
+  position: relative;
+  background: #8A1E53;
+  padding: 80px 16px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* CONTENEDOR */
+.fresa-container {
+  max-width: 1200px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.highlight {
+  color: #ffffff;
+  font-weight: 600;
+  position: relative;
+}
+
+.highlight::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 6px;
+  background: rgba(240,189,76,0.5);
+  border-radius: 4px;
+  z-index: -1;
+}
+
+/* IMAGEN PRINCIPAL */
+.fresa-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fresa-img img {
+  width: 100%;
+  max-width: 420px;
+  transform: rotate(-34deg);
+  filter: drop-shadow(0 25px 40px rgba(0,0,0,0.35));
+}
+
+/* CARD */
+.fresa-card {
+  flex: 1;
+  max-width: 420px;
+  border: 3px solid #F0BD4C;
+  border-radius: 22px;
+  padding: 40px 30px;
+  color: white;
+}
+
+/* TITULO */
+.fresa-card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+/* TEXTO */
+.fresa-card p {
+  font-family: 'Arimo', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+
+
+/* BOTON */
+.btn-fresa {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #6FCF97;
+  color: white;
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.btn-fresa img {
+  width: 18px;
+}
+
+.btn-fresa:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* 🍓 FRESAS BASE */
+.fresa-deco {
+  position: absolute;
+  width: 80px;
+  opacity: 0.95;
+  pointer-events: none;
+}
+
+/* POSICIONES PRINCIPALES */
+.f1 { top: 40px; left: 8%; transform: rotate(-20deg); }
+.f2 { top: 140px; left: 30%; transform: rotate(25deg); }
+.f3 { bottom: 60px; left: 20%; transform: rotate(-10deg); }
+.f4 { top: 60px; right: 18%; transform: rotate(15deg); }
+.f5 { bottom: 40px; right: 25%; transform: rotate(-25deg); }
+
+/* 🔥 NUEVAS FRESAS (DESKTOP) */
+.f6 {
+  top: 20%;
+  right: 35%;
+  transform: rotate(-35deg);
+}
+
+.f7 {
+  bottom: 15%;
+  left: 40%;
+  transform: rotate(30deg);
+}
+
+/* HOVER */
+.fresa-deco:hover {
+  transform: scale(1.1) rotate(0deg);
+  transition: 0.3s ease;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+  .fresa {
+    padding: 50px 16px;
+  }
+
+  .fresa-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  /* 🔥 IMAGEN */
+  .fresa-img {
+    position: relative; /* CLAVE */
+  }
+
+  .fresa-img img {
+    max-width: 260px;
+    transform: rotate(0deg);
+  }
+
+  /* 🔥 CARD */
+  .fresa-card {
+    padding: 25px;
+  }
+
+  .fresa-card h2 {
+    font-size: 24px;
+  }
+
+  .fresa-card p {
+    font-size: 14px;
+  }
+
+  .btn-fresa {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* 🔥 FRESAS SOLO ALREDEDOR DE LA IMAGEN */
+  .fresa-deco {
+    width: 55px;
+  }
+
+  /* 👇 POSICIONADAS RELATIVAS A LA IMAGEN */
+  .f1 {
+    top: -20px;
+    left: 10%;
+  }
+
+  .f2 {
+    top: 20%;
+    left: -10px;
+  }
+
+
+
+  .f6 {
+    top: 40%;
+    right: -10px;
+  }
+
+  
+
+}

@@ -1,0 +1,148 @@
+/* SECCION */
+.bebidas {
+  background: #FBEDCD;
+  padding: 80px 16px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* CONTENEDOR */
+.bebidas-container {
+  max-width: 1200px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+/* IMAGEN */
+.bebidas-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.bebidas-img img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* TEXTO */
+.bebidas-text {
+  flex: 1;
+  max-width: 520px;
+}
+
+/* TITULO */
+.bebidas-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  color: #F03591;
+  margin-bottom: 20px;
+}
+
+/* TEXTO */
+.bebidas-text p {
+  font-family: 'Arimo', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* RESALTADO SEO */
+.highlight {
+  color: #8B5FBF;
+  font-weight: 500;
+}
+
+/* BOTONES */
+.bebidas-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* BOTON WHATSAPP */
+.btn-whatsapp-bebidas {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  background: #6FCF97;
+  color: white;
+  text-decoration: none;
+
+  padding: 14px 22px;
+  border-radius: 999px;
+
+  font-size: 14px;
+  transition: all 0.3s ease;
+
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.btn-whatsapp-bebidas img {
+  width: 18px;
+}
+
+/* BOTON SECUNDARIO */
+.btn-bebidas {
+  background: #F0BD4C;
+  color: white;
+  text-decoration: none;
+
+  padding: 14px 22px;
+  border-radius: 999px;
+
+  font-size: 14px;
+  transition: all 0.3s ease;
+
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* HOVER */
+.btn-whatsapp-bebidas:hover,
+.btn-bebidas:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+  .bebidas {
+    padding: 40px 16px;
+  }
+
+  .bebidas-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bebidas-text {
+    align-items: center;
+  }
+
+  .bebidas-text h2 {
+    font-size: 26px;
+  }
+
+  .bebidas-text p {
+    font-size: 14px;
+  }
+
+  .bebidas-img img {
+    max-width: 320px;
+  }
+
+  .bebidas-buttons {
+    justify-content: center;
+  }
+
+}

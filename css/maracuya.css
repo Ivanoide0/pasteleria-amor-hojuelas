@@ -1,0 +1,160 @@
+/* SECCION */
+.maracuya {
+  position: relative;
+  background: #F0BD4C;
+  padding: 80px 16px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* CONTENEDOR */
+.maracuya-container {
+  max-width: 1200px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* CARD */
+.maracuya-card {
+  flex: 1;
+  max-width: 420px;
+
+  border: 3px solid #8A1E53;
+  border-radius: 22px;
+
+  padding: 40px 30px;
+
+  color: white;
+}
+
+/* TITULO */
+.maracuya-card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+/* TEXTO */
+.maracuya-card p {
+  font-family: 'Arimo', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* BOTON */
+.btn-maracuya {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  background: #6FCF97;
+  color: white;
+  text-decoration: none;
+
+  padding: 12px 22px;
+  border-radius: 999px;
+
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.btn-maracuya img {
+  width: 18px;
+}
+
+.btn-maracuya:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* IMAGEN */
+.maracuya-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.maracuya-img img {
+  width: 100%;
+  max-width: 420px;
+  transform: rotate(17deg);
+  filter: drop-shadow(0 25px 40px rgba(0,0,0,0.35));
+}
+
+/* DECORACIONES */
+.maracuya-deco {
+  position: absolute;
+  width: 70px;
+  opacity: 0.95;
+  pointer-events: none;
+}
+
+/* POSICIONES */
+.m1 { top: 40px; left: 10%; transform: rotate(-20deg); }
+.m2 { top: 120px; left: 30%; transform: rotate(25deg); }
+.m3 { bottom: 60px; left: 15%; transform: rotate(-10deg); }
+.m4 { top: 60px; right: 15%; transform: rotate(15deg); }
+.m5 { bottom: 40px; right: 25%; transform: rotate(-25deg); }
+.m7 { bottom: 20%; left: 40%; transform: rotate(-30deg); }
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+  .maracuya {
+    padding: 50px 16px;
+  }
+
+  .maracuya-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .maracuya-img {
+    position: relative;
+  }
+
+  .maracuya-img img {
+    max-width: 260px;
+    transform: rotate(0deg);
+  }
+
+  .maracuya-card {
+    padding: 25px;
+  }
+
+  .maracuya-card h2 {
+    font-size: 24px;
+  }
+
+  .maracuya-card p {
+    font-size: 14px;
+  }
+
+  .btn-maracuya {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* MÁS GRANDES EN MOBILE */
+  .maracuya-deco {
+    width: 50px;
+  }
+
+  /* POSICIONADAS ALREDEDOR DE LA IMAGEN */
+  .m1 { top: -20px; left: 10%; }
+  .m2 { top: 20%; left: -10px; }
+  .m3 { bottom: 10%; left: 15%; }
+  .m4 { top: 0; right: 10%; }
+  .m5 { bottom: 0; right: 15%; }
+  .m6 { top: 40%; right: -10px; }
+  .m7 { bottom: -10px; left: 50%; transform: translateX(-50%); }
+
+}

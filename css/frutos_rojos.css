@@ -1,0 +1,161 @@
+/* SECCION */
+.frutos {
+  position: relative;
+  background: #300A1D;
+  padding: 80px 16px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* CONTENEDOR */
+.frutos-container {
+  max-width: 1200px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* CARD */
+.frutos-card {
+  flex: 1;
+  max-width: 420px;
+
+  border: 3px solid #F0BD4C;
+  border-radius: 22px;
+
+  padding: 40px 30px;
+  color: white;
+}
+
+/* TITULO */
+.frutos-card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+/* TEXTO */
+.frutos-card p {
+  font-family: 'Arimo', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* BOTON */
+.btn-frutos {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  background: #6FCF97;
+  color: white;
+  text-decoration: none;
+
+  padding: 12px 22px;
+  border-radius: 999px;
+
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.btn-frutos img {
+  width: 18px;
+}
+
+.btn-frutos:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* IMAGEN */
+.frutos-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.frutos-img img {
+  width: 100%;
+  max-width: 420px;
+  transform: rotate(17deg);
+  filter: drop-shadow(0 25px 40px rgba(0,0,0,0.4));
+}
+
+/* 🍓 DECORACION */
+.frutos-deco {
+  position: absolute;
+  width: 75px;
+  opacity: 0.95;
+  pointer-events: none;
+}
+
+/* POSICIONES */
+.f1 { top: 40px; left: 10%; transform: rotate(-20deg); }
+.f2 { top: 120px; left: 30%; transform: rotate(15deg); }
+.f3 { bottom: 50px; left: 20%; transform: rotate(-10deg); }
+.f4 { top: 60px; right: 18%; transform: rotate(20deg); }
+.f5 { bottom: 40px; right: 25%; transform: rotate(-25deg); }
+.f6 { top: 50%; left: 5%; transform: rotate(10deg); }
+.f7 { bottom: 20%; right: 10%; transform: rotate(-15deg); }
+
+/* HOVER SUAVE */
+.frutos-deco:hover {
+  transform: scale(1.1);
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+  .frutos {
+    padding: 50px 16px;
+  }
+
+  .frutos-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .frutos-img img {
+    max-width: 260px;
+    transform: rotate(0deg);
+  }
+
+  .frutos-card {
+    padding: 25px;
+  }
+
+  .frutos-card h2 {
+    font-size: 24px;
+  }
+
+  .frutos-card p {
+    font-size: 14px;
+  }
+
+  .btn-frutos {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* SOLO FRESAS CERCA DE IMAGEN */
+  .frutos-deco {
+    width: 45px;
+  }
+
+  .f1 { top: 10px; left: 20%; }
+  .f2 { top: 80px; right: 15%; }
+  .f3 { top: 140px; left: 10%; }
+  .f4 { top: 200px; right: 20%; }
+
+  /* ocultamos extras */
+  .f5, .f6, .f7 {
+    display: none;
+  }
+
+}

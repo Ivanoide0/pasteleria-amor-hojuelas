@@ -1,0 +1,161 @@
+/* SECCION */
+.manzana {
+  position: relative;
+  background: #4E46A8;
+  padding: 80px 16px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* CONTENEDOR */
+.manzana-container {
+  max-width: 1200px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* IMAGEN */
+.manzana-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.manzana-img img {
+  width: 100%;
+  max-width: 420px;
+  transform: rotate(-34deg);
+  filter: drop-shadow(0 25px 40px rgba(0,0,0,0.35));
+}
+
+/* CARD */
+.manzana-card {
+  flex: 1;
+  max-width: 420px;
+
+  border: 3px solid #F0BD4C;
+  border-radius: 22px;
+
+  padding: 40px 30px;
+
+  color: white;
+}
+
+/* TITULO */
+.manzana-card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+/* TEXTO */
+.manzana-card p {
+  font-family: 'Arimo', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* BOTON */
+.btn-manzana {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  background: #6FCF97;
+  color: white;
+  text-decoration: none;
+
+  padding: 12px 22px;
+  border-radius: 999px;
+
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.btn-manzana img {
+  width: 18px;
+}
+
+.btn-manzana:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* DECORACIONES */
+.manzana-deco {
+  position: absolute;
+  width: 70px;
+  opacity: 0.95;
+  pointer-events: none;
+}
+
+/* POSICIONES */
+.a1 { top: 40px; left: 10%; transform: rotate(-20deg); }
+.a2 { top: 120px; left: 30%; transform: rotate(25deg); }
+.a3 { bottom: 60px; left: 15%; transform: rotate(-10deg); }
+.a4 { top: 60px; right: 15%; transform: rotate(15deg); }
+.a5 { bottom: 40px; right: 25%; transform: rotate(-25deg); }
+.a6 { top: 30%; right: 35%; transform: rotate(30deg); }
+.a7 { bottom: 20%; left: 40%; transform: rotate(-30deg); }
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+  .manzana {
+    padding: 50px 16px;
+  }
+
+  .manzana-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .manzana-img {
+    position: relative;
+  }
+
+  .manzana-img img {
+    max-width: 260px;
+    transform: rotate(0deg);
+  }
+
+  .manzana-card {
+    padding: 25px;
+  }
+
+  .manzana-card h2 {
+    font-size: 24px;
+  }
+
+  .manzana-card p {
+    font-size: 14px;
+  }
+
+  .btn-manzana {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* MÁS GRANDES EN MOBILE */
+  .manzana-deco {
+    width: 50px;
+  }
+
+  /* ALREDEDOR DE LA IMAGEN */
+  .a1 { top: -20px; left: 10%; }
+  .a2 { top: 20%; left: -10px; }
+  .a3 { bottom: 10%; left: 15%; }
+  .a4 { top: 0; right: 10%; }
+  .a5 { bottom: 0; right: 15%; }
+  .a6 { top: 40%; right: -10px; }
+  .a7 { bottom: -10px; left: 50%; transform: translateX(-50%); }
+
+}

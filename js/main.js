@@ -41,7 +41,7 @@ function enviarWhatsApp() {
   const mensaje = document.getElementById("mensaje").value.trim();
   const tipo = document.getElementById("tipo").value;
 
-  const numero = "529981496808";
+  const numero = "529988446518";
 
   // VALIDACIONES
   const telRegex = /^[0-9]{10}$/;

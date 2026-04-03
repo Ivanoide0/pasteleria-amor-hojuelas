@@ -6,47 +6,6 @@
   background: #ffffff;
 }
 
-.hero-description {
-  font-family: 'Arimo', sans-serif;
-  font-size: 15px;
-  line-height: 1.8;
-
-  color: #444;
-
-  /* 🔥 CLAVE VISUAL */
-  text-align: justify;
-  text-justify: inter-word;
-
-  margin: 0 auto 28px;
-  max-width: 460px;
-
-  letter-spacing: 0.3px;
-}
-
-/* 🔥 PALABRAS CLAVE (SEO + VISUAL) */
-.hero-description strong {
-  font-weight: 600;
-  color: #111;
-}
-
-/* ✨ EFECTO SUTIL PREMIUM */
-.hero-description strong {
-  position: relative;
-}
-
-/* línea elegante muy sutil */
-.hero-description strong::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-
-  width: 100%;
-  height: 1px;
-
-  background: linear-gradient(90deg, #F0BD4C, transparent);
-  opacity: 0.6;
-}
 
 /* CONTENEDOR */
 .hero-container {

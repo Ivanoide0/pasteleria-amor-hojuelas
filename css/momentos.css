@@ -5,6 +5,11 @@
   padding: 60px 16px;
 }
 
+.seo-hidden {
+  position: absolute;
+  left: -9999px;
+}
+
 /* CONTENEDOR */
 .momentos-container {
   width: 100%;

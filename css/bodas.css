@@ -108,6 +108,84 @@
   z-index: 1;
 }
 
+/* WRAPPER */
+.galeria-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* TRACK (carrusel) */
+.galeria-track {
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+/* ITEM */
+.galeria-item {
+  min-width: 320px;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.galeria-item:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+/* BOTONES FLECHA */
+.galeria-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #F0BD4C;
+  border: none;
+  color: white;
+  font-size: 28px;
+  padding: 10px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.galeria-btn.prev { left: -10px; }
+.galeria-btn.next { right: -10px; }
+
+/* BOTON WHATSAPP */
+.btn-wsp {
+  display: inline-block;
+  margin-top: 10px;
+  background: #25D366;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-wsp:hover {
+  background: #1ebe5d;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .galeria-btn {
+    display: none;
+  }
+
+  .galeria-track {
+    overflow-x: auto;
+  }
+
+}
+
 /* 📱 MOBILE */
 @media (max-width: 768px) {
 

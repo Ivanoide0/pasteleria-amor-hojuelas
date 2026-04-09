@@ -107,3 +107,51 @@ document.querySelectorAll('.btn-card').forEach(btn => {
     e.stopPropagation();
   });
 });
+const track = document.querySelector('.galeria-track');
+const next = document.querySelector('.next');
+const prev = document.querySelector('.prev');
+
+// ==============================
+// SCROLL CON LOOP
+// ==============================
+
+const scrollAmount = 350;
+
+next.addEventListener('click', () => {
+  // Si ya estás al final → vuelve al inicio
+  if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 5) {
+    track.scrollTo({ left: 0, behavior: 'smooth' });
+  } else {
+    track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  }
+});
+
+prev.addEventListener('click', () => {
+  // Si estás al inicio → ir al final
+  if (track.scrollLeft <= 5) {
+    track.scrollTo({ left: track.scrollWidth, behavior: 'smooth' });
+  } else {
+    track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  }
+});
+
+// ==============================
+// WHATSAPP DINAMICO
+// ==============================
+
+const buttons = document.querySelectorAll('.btn-wsp');
+
+buttons.forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+
+    const card = btn.closest('.galeria-item');
+    const nombre = card.getAttribute('data-name');
+
+    const mensaje = encodeURIComponent(
+      `Hola, me interesa este diseño: ${nombre}. ¿Me podrías dar precio y opciones?`
+    );
+
+    window.open(`https://wa.me/529988446518?text=${mensaje}`, '_blank');
+  });
+});

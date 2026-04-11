@@ -64,13 +64,26 @@
 .momentos-text {
   font-family: 'Cinzel', serif;
   font-size: 16px;
-  line-height: 1.8;
-  margin-bottom: 12px;
+  line-height: 1.9;
+  margin-bottom: 16px;
   color: #333;
 
   text-align: justify;
-  text-align-last: center;
+
+  /* 🔥 ESTO LO HACE VER PROFESIONAL */
+  text-justify: inter-word;
+
+  /* 🔥 EVITA ESPACIOS RAROS */
+  hyphens: auto;
+
+  /* 🔥 MEJOR LECTURA */
+  letter-spacing: 0.3px;
+
+  /* 🔥 MÁS ELEGANTE */
+  max-width: 600px;
 }
+
+
 
 /* HIGHLIGHTS */
 .highlight.purple {
@@ -89,7 +102,7 @@
   font-size: 18px;
   font-weight: 600;
   color: #F03591;
-  text-align: center;
+  text-align: justify;
 }
 
 @media (max-width: 768px) {
@@ -136,6 +149,8 @@
   .momentos-text {
     font-size: 15px;
     padding: 0 10px;
+        text-align: left; /* 🔥 en móvil se lee mejor */
+    hyphens: none;
   }
 
   .seo-h2 {

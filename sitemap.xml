@@ -8,31 +8,37 @@
   </url>
 
   <url>
-    <loc>https://pasteleriacancun.com/bodas</loc>
+    <loc>https://pasteleriacancun.com/pasteleria-cancun.html</loc>
+    <lastmod>2026-03-31</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://pasteleriacancun.com/bodas.html</loc>
     <lastmod>2026-03-31</lastmod>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://pasteleriacancun.com/cumpleaños</loc>
+    <loc>https://pasteleriacancun.com/cumpleaños.html</loc>
     <lastmod>2026-03-31</lastmod>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://pasteleriacancun.com/xv</loc>
+    <loc>https://pasteleriacancun.com/xv.html</loc>
     <lastmod>2026-03-31</lastmod>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://pasteleriacancun.com/bebidas</loc>
+    <loc>https://pasteleriacancun.com/bebidas.html</loc>
     <lastmod>2026-03-31</lastmod>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://pasteleriacancun.com/postres</loc>
+    <loc>https://pasteleriacancun.com/postres.html</loc>
     <lastmod>2026-03-31</lastmod>
     <priority>0.8</priority>
   </url>

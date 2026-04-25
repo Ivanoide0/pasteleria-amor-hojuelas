@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  font-family: 'Arimo', sans-serif;
+  background: linear-gradient(135deg, #fff, #fff6f8);
+  overflow: hidden;
+}
+
+/* CONTENEDOR */
+.gracias-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* TARJETA */
+.gracias-card {
+  background: #ffffff;
+  padding: 50px 40px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+  z-index: 2;
+  animation: fadeUp 0.8s ease;
+}
+
+/* ICONO */
+.icon {
+  width: 60px;
+  margin-bottom: 20px;
+}
+
+/* TEXTO */
+.gracias-card h1 {
+  margin: 0;
+  font-size: 26px;
+  color: #2d2d2d;
+}
+
+.gracias-card p {
+  margin: 15px 0 30px;
+  color: #666;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* BOTÓN */
+.btn-volver {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #ff8fa3, #ffb3c1);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-volver:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(255, 143, 163, 0.4);
+}
+
+/* GLOW DECORATIVO */
+.glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.4;
+}
+
+.glow-1 {
+  width: 300px;
+  height: 300px;
+  background: #ffb3c1;
+  top: 10%;
+  left: 10%;
+}
+
+.glow-2 {
+  width: 300px;
+  height: 300px;
+  background: #ffd6e0;
+  bottom: 10%;
+  right: 10%;
+}
+
+/* ANIMACIÓN */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .gracias-card {
+    margin: 20px;
+    padding: 40px 25px;
+  }
+
+  .gracias-card h1 {
+    font-size: 22px;
+  }
+}

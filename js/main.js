@@ -152,19 +152,26 @@ ${mensaje || "Sin mensaje adicional"}
 `;
 
   const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+setTimeout(() => {
 
+  // Abrir WhatsApp
+  window.open(url, "_blank");
+
+  // Restaurar botón
+  if (btn) {
+    btn.classList.remove("loading");
+    btn.querySelector(".btn-text").innerText = "Enviar";
+  }
+
+  status.innerText = "Redirigiendo...";
+  status.style.color = "#6FCF97";
+
+  // 🔥 REDIRECCIÓN A GRACIAS
   setTimeout(() => {
-    window.open(url, "_blank");
+    window.location.href = "gracias.html";
+  }, 1200);
 
-    if (btn) {
-      btn.classList.remove("loading");
-      btn.querySelector(".btn-text").innerText = "Enviar";
-    }
-
-    status.innerText = "Mensaje listo para enviar en WhatsApp";
-    status.style.color = "#6FCF97";
-
-  }, 800);
+}, 800);
 }
 
 function mostrarError(msg) {

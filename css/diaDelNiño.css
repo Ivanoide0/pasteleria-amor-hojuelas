@@ -141,7 +141,6 @@
 
 /* IMAGEN CENTRAL */
 .promo-nino-img {
-    border-radius: 20px;
   position: relative;
   z-index: 2;
   display: flex;
@@ -193,6 +192,67 @@
   margin-bottom: 20px;
 }
 
+/* FOTO DEL LOCAL */
+.promo-local-card {
+  position: relative;
+  width: 100%;
+  height: 170px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 20px 0 16px;
+
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.22);
+}
+
+.promo-local-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+  transform: scale(1.02);
+  transition: transform 0.45s ease;
+}
+
+.promo-local-card:hover img {
+  transform: scale(1.08);
+}
+
+.promo-local-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  padding: 16px;
+
+  background: linear-gradient(
+    to top,
+    rgba(48, 10, 29, 0.78),
+    rgba(48, 10, 29, 0.15),
+    transparent
+  );
+
+  color: white;
+}
+
+.promo-local-overlay span {
+  font-family: 'Arimo', sans-serif;
+  font-size: 13px;
+  opacity: 0.9;
+  margin-bottom: 4px;
+}
+
+.promo-local-overlay strong {
+  font-family: 'Cinzel', serif;
+  font-size: 15px;
+}
+
+/* MINI CARDS */
 .promo-mini-card {
   background: rgba(255, 255, 255, 0.14);
   border: 1px solid rgba(255, 255, 255, 0.22);
@@ -270,6 +330,18 @@
   .promo-nino-container:hover .promo-nino-img img {
     transform: scale(1.02);
   }
+
+  .promo-local-card {
+    max-width: 520px;
+    height: 220px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .promo-local-overlay {
+    align-items: center;
+    text-align: center;
+  }
 }
 
 /* ==============================
@@ -314,6 +386,11 @@
     font-size: 26px;
   }
 
+  .promo-local-card {
+    height: 190px;
+    border-radius: 18px;
+  }
+
   .promo-mini-card {
     text-align: center;
   }
@@ -331,5 +408,13 @@
 
   .promo-nino-img img {
     max-width: 240px;
+  }
+
+  .promo-local-card {
+    height: 165px;
+  }
+
+  .promo-local-overlay strong {
+    font-size: 14px;
   }
 }

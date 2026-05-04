@@ -181,3 +181,96 @@ function mostrarError(msg) {
     status.style.color = "#ff4d6d";
   }
 }
+
+// ==============================
+// PROMOS ESPECIALES
+// ==============================
+
+const promosToggle = document.getElementById("promosToggle");
+const promosContent = document.getElementById("promosContent");
+const promosGrid = document.getElementById("promosGrid");
+
+const promoNinoCard = document.getElementById("promoNinoCard");
+const verPromoNino = document.getElementById("verPromoNino");
+const promoNinoDetail = document.getElementById("promoNinoDetail");
+const cerrarPromoNino = document.getElementById("cerrarPromoNino");
+
+/* ABRIR / CERRAR TODA LA SECCION DE PROMOS */
+if (promosToggle && promosContent) {
+  promosToggle.addEventListener("click", () => {
+    promosToggle.classList.toggle("active");
+    promosContent.classList.toggle("active");
+
+    // Si se cierra todo, también cerramos el detalle
+    if (!promosContent.classList.contains("active")) {
+      if (promoNinoDetail) {
+        promoNinoDetail.classList.remove("active");
+      }
+
+      if (promosGrid) {
+        promosGrid.classList.remove("hidden");
+      }
+    }
+  });
+}
+
+/* ABRIR DETALLE DIA DEL NIÑO */
+function abrirPromoNino() {
+  if (promoNinoDetail) {
+    promoNinoDetail.classList.add("active");
+  }
+
+  if (promosGrid) {
+    promosGrid.classList.add("hidden");
+  }
+
+  setTimeout(() => {
+    if (promoNinoDetail) {
+      promoNinoDetail.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+  }, 300);
+}
+
+/* CERRAR DETALLE Y VOLVER A TARGETS */
+function cerrarDetallePromoNino() {
+  if (promoNinoDetail) {
+    promoNinoDetail.classList.remove("active");
+  }
+
+  if (promosGrid) {
+    promosGrid.classList.remove("hidden");
+  }
+
+  setTimeout(() => {
+    if (promosGrid) {
+      promosGrid.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
+    }
+  }, 250);
+}
+
+/* CLICK EN CARD */
+if (promoNinoCard) {
+  promoNinoCard.addEventListener("click", abrirPromoNino);
+}
+
+/* CLICK EN BOTON VER DETALLES */
+if (verPromoNino) {
+  verPromoNino.addEventListener("click", (e) => {
+    e.stopPropagation();
+    abrirPromoNino();
+  });
+}
+
+/* CLICK EN BOTON CERRAR DETALLES */
+if (cerrarPromoNino) {
+  cerrarPromoNino.addEventListener("click", (e) => {
+    e.stopPropagation();
+    cerrarDetallePromoNino();
+  });
+}

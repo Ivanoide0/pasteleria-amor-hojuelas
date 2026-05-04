@@ -1,0 +1,722 @@
+/* ==============================
+   PROMOS ESPECIALES
+============================== */
+
+.promos-especiales {
+  background: linear-gradient(180deg, #ffffff 0%, #FBEDCD 100%);
+  padding: 70px 16px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.promos-container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* BOTON PRINCIPAL */
+.promos-toggle {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+
+  background: linear-gradient(135deg, #96205A, #F03591);
+  color: #ffffff;
+
+  border: none;
+  border-radius: 999px;
+
+  padding: 18px 28px;
+
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0 15px 35px rgba(150, 32, 90, 0.28);
+  transition: all 0.3s ease;
+}
+
+.promos-toggle span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 26px;
+  height: 26px;
+
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 50%;
+
+  font-family: 'Arimo', sans-serif;
+  font-size: 22px;
+  line-height: 1;
+
+  transition: transform 0.3s ease;
+}
+
+.promos-toggle:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 20px 45px rgba(150, 32, 90, 0.35);
+}
+
+.promos-toggle.active span {
+  transform: rotate(45deg);
+}
+
+/* CONTENIDO OCULTO */
+.promos-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+
+  transition: max-height 0.7s ease, opacity 0.4s ease, margin-top 0.4s ease;
+}
+
+.promos-content.active {
+  max-height: 4000px;
+  opacity: 1;
+  margin-top: 50px;
+}
+
+/* TITULOS */
+.promos-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 38px;
+  color: #96205A;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.promos-subtitle {
+  max-width: 680px;
+  margin: 0 auto 40px;
+  text-align: center;
+
+  font-family: 'Arimo', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* GRID */
+.promos-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(280px, 420px));
+  justify-content: center;
+  gap: 30px;
+
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.promos-grid.hidden {
+  opacity: 0.25;
+  transform: scale(0.98);
+}
+
+/* CARD PREVIEW */
+.promo-card {
+  background: #ffffff;
+  border-radius: 22px;
+  overflow: hidden;
+
+  cursor: pointer;
+
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.11);
+  transition: all 0.35s ease;
+
+  border: 2px solid rgba(240, 189, 76, 0.55);
+}
+
+.promo-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.16);
+}
+
+.promo-card-image {
+  background: linear-gradient(135deg, #FBEDCD, #ffffff);
+  height: 260px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.promo-card-image img {
+  width: 100%;
+  max-width: 230px;
+  height: 230px;
+  object-fit: contain;
+
+  filter: drop-shadow(0 15px 22px rgba(0, 0, 0, 0.2));
+  transition: transform 0.35s ease;
+}
+
+.promo-card:hover .promo-card-image img {
+  transform: scale(1.06) rotate(-2deg);
+}
+
+.promo-card-info {
+  padding: 24px;
+  text-align: center;
+}
+
+.promo-card-tag {
+  display: inline-block;
+
+  background: #F0BD4C;
+  color: #ffffff;
+
+  padding: 7px 14px;
+  border-radius: 999px;
+
+  font-family: 'Arimo', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+
+  margin-bottom: 14px;
+}
+
+.promo-card-info h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 24px;
+  color: #96205A;
+  margin-bottom: 10px;
+}
+
+.promo-card-info p {
+  font-family: 'Arimo', sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.promo-card-btn {
+  background: #6FCF97;
+  color: white;
+
+  border: none;
+  border-radius: 999px;
+
+  padding: 12px 22px;
+
+  font-family: 'Arimo', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.promo-card-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(111, 207, 151, 0.35);
+}
+
+/* DETALLE OCULTO */
+.promo-detail {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+
+  transition: max-height 0.8s ease, opacity 0.45s ease, margin-top 0.45s ease;
+}
+
+.promo-detail.active {
+  max-height: 3000px;
+  opacity: 1;
+  margin-top: 60px;
+}
+
+/* ==============================
+   SECCION PROMO DIA DEL NIÑO
+============================== */
+
+.promo-nino {
+  background: transparent;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.promo-nino-container {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 1.1fr 0.9fr;
+  align-items: center;
+  gap: 30px;
+
+  background: linear-gradient(
+    90deg,
+    #96205A 0%,
+    #B7824F 50%,
+    #3B887E 100%
+  );
+
+  border-radius: 28px;
+  padding: 55px;
+  position: relative;
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.16);
+}
+
+/* DECORACION SUAVE */
+.promo-nino-container::before {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  background: rgba(240, 189, 76, 0.25);
+  border-radius: 50%;
+  top: -120px;
+  right: 20%;
+  filter: blur(20px);
+}
+
+.promo-nino-container::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  background: rgba(255, 255, 255, 0.13);
+  border-radius: 50%;
+  bottom: -100px;
+  left: 35%;
+  filter: blur(18px);
+}
+
+/* TEXTO IZQUIERDA */
+.promo-nino-text {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+.promo-tag {
+  display: inline-block;
+  background: #F0BD4C;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-family: 'Arimo', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.promo-nino-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 58px;
+  line-height: 1;
+  margin: 0 0 18px;
+}
+
+.promo-line {
+  width: 70px;
+  height: 3px;
+  background: #F0BD4C;
+  border-radius: 999px;
+  margin-bottom: 24px;
+}
+
+.promo-nino-text h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 24px;
+  line-height: 1.3;
+  margin-bottom: 14px;
+}
+
+.promo-nino-text p {
+  font-family: 'Arimo', sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  max-width: 420px;
+}
+
+.promo-date {
+  background: rgba(255, 255, 255, 0.14);
+  border-left: 4px solid #F0BD4C;
+  padding: 12px 14px;
+  border-radius: 12px;
+}
+
+/* ACCIONES */
+.promo-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+/* BOTON WHATSAPP */
+.promo-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  background: #6FCF97;
+  color: white;
+  text-decoration: none;
+
+  padding: 14px 24px;
+  border-radius: 999px;
+
+  font-family: 'Arimo', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.16);
+  transition: all 0.3s ease;
+}
+
+.promo-btn img {
+  width: 22px;
+  height: 22px;
+}
+
+.promo-btn:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.22);
+}
+
+/* BOTON CERRAR */
+.promo-close-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.16);
+  color: white;
+
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+  border-radius: 999px;
+
+  padding: 14px 22px;
+
+  font-family: 'Arimo', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+
+.promo-close-btn:hover {
+  background: rgba(255, 255, 255, 0.28);
+  transform: translateY(-3px);
+}
+
+/* IMAGEN CENTRAL */
+.promo-nino-img {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.promo-nino-img img {
+  width: 100%;
+  max-width: 430px;
+  filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.3));
+  transform: translateY(20px);
+  transition: transform 0.4s ease;
+}
+
+.promo-nino-container:hover .promo-nino-img img {
+  transform: translateY(8px) scale(1.03);
+}
+
+/* INFO DERECHA */
+.promo-nino-info {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding-left: 20px;
+}
+
+.promo-nino-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  line-height: 1.2;
+  margin-bottom: 22px;
+}
+
+.promo-nino-info h3::after {
+  content: "";
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.8);
+  margin-top: 22px;
+}
+
+.promo-nino-info p {
+  font-family: 'Arimo', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* FOTO DEL LOCAL */
+.promo-local-card {
+  position: relative;
+  width: 100%;
+  height: 170px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 20px 0 16px;
+
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.22);
+}
+
+.promo-local-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+  transform: scale(1.02);
+  transition: transform 0.45s ease;
+}
+
+.promo-local-card:hover img {
+  transform: scale(1.08);
+}
+
+.promo-local-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  padding: 16px;
+
+  background: linear-gradient(
+    to top,
+    rgba(48, 10, 29, 0.78),
+    rgba(48, 10, 29, 0.15),
+    transparent
+  );
+
+  color: white;
+}
+
+.promo-local-overlay span {
+  font-family: 'Arimo', sans-serif;
+  font-size: 13px;
+  opacity: 0.9;
+  margin-bottom: 4px;
+}
+
+.promo-local-overlay strong {
+  font-family: 'Cinzel', serif;
+  font-size: 15px;
+}
+
+/* MINI CARDS */
+.promo-mini-card {
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 16px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  backdrop-filter: blur(6px);
+}
+
+.promo-mini-card span {
+  display: block;
+  font-size: 13px;
+  opacity: 0.85;
+  margin-bottom: 4px;
+}
+
+.promo-mini-card strong {
+  font-size: 15px;
+}
+
+/* ==============================
+   RESPONSIVE TABLET
+============================== */
+
+@media (max-width: 992px) {
+
+  .promos-especiales {
+    padding: 55px 16px;
+  }
+
+  .promo-nino-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 48px 28px;
+  }
+
+  .promo-nino-text,
+  .promo-nino-info {
+    padding: 0;
+  }
+
+  .promo-line {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .promo-nino-text p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .promo-actions {
+    justify-content: center;
+  }
+
+  .promo-nino-info h3::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .promo-nino-img img {
+    max-width: 360px;
+    transform: none;
+  }
+
+  .promo-nino-container:hover .promo-nino-img img {
+    transform: scale(1.02);
+  }
+
+  .promo-local-card {
+    max-width: 520px;
+    height: 220px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .promo-local-overlay {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* ==============================
+   RESPONSIVE MOBILE
+============================== */
+
+@media (max-width: 768px) {
+
+  .promos-especiales {
+    padding: 45px 16px;
+  }
+
+  .promos-toggle {
+    font-size: 15px;
+    padding: 16px 20px;
+  }
+
+  .promos-title {
+    font-size: 30px;
+  }
+
+  .promos-subtitle {
+    font-size: 14px;
+    margin-bottom: 28px;
+  }
+
+  .promo-card-image {
+    height: 220px;
+  }
+
+  .promo-card-image img {
+    max-width: 190px;
+    height: 190px;
+  }
+
+  .promo-nino-container {
+    border-radius: 24px;
+    padding: 36px 20px;
+    gap: 28px;
+  }
+
+  .promo-nino-text h2 {
+    font-size: 42px;
+  }
+
+  .promo-nino-text h3 {
+    font-size: 20px;
+  }
+
+  .promo-nino-text p,
+  .promo-nino-info p {
+    font-size: 14px;
+  }
+
+  .promo-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .promo-btn,
+  .promo-close-btn {
+    width: 100%;
+    padding: 14px 18px;
+  }
+
+  .promo-nino-img img {
+    max-width: 280px;
+  }
+
+  .promo-nino-info h3 {
+    font-size: 26px;
+  }
+
+  .promo-local-card {
+    height: 190px;
+    border-radius: 18px;
+  }
+
+  .promo-mini-card {
+    text-align: center;
+  }
+}
+
+@media (max-width: 420px) {
+
+  .promo-nino-text h2 {
+    font-size: 36px;
+  }
+
+  .promo-nino-info h3 {
+    font-size: 24px;
+  }
+
+  .promo-nino-img img {
+    max-width: 240px;
+  }
+
+  .promo-local-card {
+    height: 165px;
+  }
+
+  .promo-local-overlay strong {
+    font-size: 14px;
+  }
+}

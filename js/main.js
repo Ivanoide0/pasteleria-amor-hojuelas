@@ -274,3 +274,72 @@ if (cerrarPromoNino) {
     cerrarDetallePromoNino();
   });
 }
+
+// ==============================
+// PROMO DIA DE LAS MADRES
+// ==============================
+
+const promoMadresCard = document.getElementById("promoMadresCard");
+const verPromoMadres = document.getElementById("verPromoMadres");
+const promoMadresDetail = document.getElementById("promoMadresDetail");
+const cerrarPromoMadres = document.getElementById("cerrarPromoMadres");
+
+function abrirPromoMadres() {
+  if (promoMadresDetail) {
+    promoMadresDetail.classList.add("active");
+  }
+
+  if (promoNinoDetail) {
+    promoNinoDetail.classList.remove("active");
+  }
+
+  if (promosGrid) {
+    promosGrid.classList.add("hidden");
+  }
+
+  setTimeout(() => {
+    if (promoMadresDetail) {
+      promoMadresDetail.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+  }, 300);
+}
+
+function cerrarDetallePromoMadres() {
+  if (promoMadresDetail) {
+    promoMadresDetail.classList.remove("active");
+  }
+
+  if (promosGrid) {
+    promosGrid.classList.remove("hidden");
+  }
+
+  setTimeout(() => {
+    if (promosGrid) {
+      promosGrid.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
+    }
+  }, 250);
+}
+
+if (promoMadresCard) {
+  promoMadresCard.addEventListener("click", abrirPromoMadres);
+}
+
+if (verPromoMadres) {
+  verPromoMadres.addEventListener("click", (e) => {
+    e.stopPropagation();
+    abrirPromoMadres();
+  });
+}
+
+if (cerrarPromoMadres) {
+  cerrarPromoMadres.addEventListener("click", (e) => {
+    e.stopPropagation();
+    cerrarDetallePromoMadres();
+  });
+}

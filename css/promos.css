@@ -720,3 +720,287 @@
     font-size: 14px;
   }
 }
+
+/* ==============================
+   GRID DE PROMOS CON 2 CARDS
+============================== */
+
+.promos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 420px));
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Card día madres */
+.promo-card-madres {
+  border: 2px solid rgba(240, 189, 76, 0.65);
+}
+
+.promo-card-image-madres {
+  background: linear-gradient(135deg, #fff4f7, #FBEDCD);
+}
+
+.promo-card-madres:hover .promo-card-image img {
+  transform: scale(1.06) rotate(2deg);
+}
+
+.madres-tag {
+  background: #96205A;
+}
+
+/* Botón card madres */
+.madres-btn {
+  background: #F03591;
+}
+
+.madres-btn:hover {
+  box-shadow: 0 12px 24px rgba(240, 53, 145, 0.35);
+}
+
+/* ==============================
+   DETALLE DIA DE LAS MADRES
+============================== */
+
+.promo-madres {
+  background: transparent;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.promo-madres-container {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 1.05fr 0.95fr;
+  align-items: center;
+  gap: 34px;
+
+  background: linear-gradient(
+    90deg,
+    #300A1D 0%,
+    #96205A 48%,
+    #F0BD4C 100%
+  );
+
+  border-radius: 28px;
+  padding: 55px;
+  position: relative;
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+}
+
+/* Decoraciones sutiles */
+.promo-madres-container::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  background: rgba(255, 255, 255, 0.13);
+  border-radius: 50%;
+  top: -90px;
+  right: 12%;
+}
+
+.promo-madres-container::after {
+  content: "";
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  background: rgba(240, 189, 76, 0.28);
+  border-radius: 50%;
+  bottom: -100px;
+  left: 35%;
+}
+
+.promo-madres-text,
+.promo-madres-img,
+.promo-madres-info {
+  position: relative;
+  z-index: 2;
+}
+
+/* Texto */
+.promo-madres-text {
+  color: white;
+}
+
+.promo-madres-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 56px;
+  line-height: 1;
+  margin: 0 0 18px;
+}
+
+.madres-line {
+  background: #F0BD4C;
+}
+
+.promo-madres-text h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 23px;
+  line-height: 1.35;
+  margin-bottom: 16px;
+}
+
+.promo-madres-text p {
+  font-family: 'Arimo', sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+  max-width: 450px;
+}
+
+.madres-date {
+  background: rgba(255, 255, 255, 0.14);
+  border-left: 4px solid #F0BD4C;
+}
+
+/* Imagen */
+.promo-madres-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.promo-madres-img img {
+  width: 100%;
+  max-width: 430px;
+  filter: drop-shadow(0 28px 38px rgba(0, 0, 0, 0.32));
+  transform: rotate(-4deg);
+  transition: transform 0.4s ease;
+}
+
+.promo-madres-container:hover .promo-madres-img img {
+  transform: rotate(-2deg) scale(1.03);
+}
+
+/* Info derecha */
+.promo-madres-info {
+  color: white;
+}
+
+.promo-madres-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.promo-madres-info h3::after {
+  content: "";
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.8);
+  margin-top: 22px;
+}
+
+.promo-madres-info p {
+  font-family: 'Arimo', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.madres-mini {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Botones madres */
+.madres-whatsapp {
+  background: #6FCF97;
+}
+
+.madres-close {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 992px) {
+
+  .promos-grid {
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+  }
+
+  .promo-madres-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 48px 28px;
+  }
+
+  .promo-madres-text p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .promo-madres-info h3::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .promo-madres-img img {
+    max-width: 360px;
+    transform: none;
+  }
+
+  .promo-madres-container:hover .promo-madres-img img {
+    transform: scale(1.02);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .promos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .promo-madres-container {
+    border-radius: 24px;
+    padding: 36px 20px;
+    gap: 28px;
+  }
+
+  .promo-madres-text h2 {
+    font-size: 42px;
+  }
+
+  .promo-madres-text h3 {
+    font-size: 20px;
+  }
+
+  .promo-madres-text p,
+  .promo-madres-info p {
+    font-size: 14px;
+  }
+
+  .promo-madres-img img {
+    max-width: 280px;
+  }
+
+  .promo-madres-info h3 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 420px) {
+
+  .promo-madres-text h2 {
+    font-size: 36px;
+  }
+
+  .promo-madres-info h3 {
+    font-size: 24px;
+  }
+
+  .promo-madres-img img {
+    max-width: 240px;
+  }
+}
